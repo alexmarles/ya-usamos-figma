@@ -1,0 +1,38 @@
+:root {
+  --unit: clamp(0.5rem, 1vw, 1rem);
+  --minBaseFontSize: 1.5rem;
+  --maxBaseFontSize: 3rem;
+  --baseFontSize: clamp(var(--minBaseFontSize), 2.5vw, var(--maxBaseFontSize));
+  --baseFontFamily: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Segoe UI", sans-serif;
+  --pagePadding: var(--space-m);
+
+  --space-s: var(--unit);
+  --space-m: calc(var(--space-s) + var(--space-s));
+  --space-l: calc(var(--space-s) + var(--space-m));
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--baseFontFamily);
+  font-size: var(--baseFontSize);
+  margin: unset;
+  padding: var(--pagePadding);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 20vh;
+  text-align: center;
+}
